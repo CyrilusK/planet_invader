@@ -27,5 +27,6 @@ public class BehaviourScript : MonoBehaviour
                 counter = 0;
             }
         }
+        GetComponent<TextMesh>().text = population.ToString();
     }
 }
