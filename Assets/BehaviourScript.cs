@@ -27,6 +27,15 @@ public class BehaviourScript : MonoBehaviour
                 counter = 0;
             }
         }
-        GetComponent<TextMesh>().text = population.ToString();
+    }
+
+    private void OnMouseDown()
+    {
+        if (owned_by_user == true)
+        {
+            population /= 2;
+            neutral = false;
+            owned_by_user = true;
+        }
     }
 }

@@ -858,6 +858,7 @@ GameObject:
   - component: {fileID: 579479234}
   - component: {fileID: 579479233}
   - component: {fileID: 579479236}
+  - component: {fileID: 579479235}
   m_Layer: 0
   m_Name: planetGray (9)
   m_TagString: Untagged
@@ -930,6 +931,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!58 &579479235
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579479232}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!222 &579479236
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2056,7 +2073,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 2
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1721295058
 Transform:
@@ -2324,8 +2341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 5}
+  m_AnchoredPosition: {x: -0.068901, y: 0}
+  m_SizeDelta: {x: 5.2157, y: 5}
   m_Pivot: {x: 0.49999994, y: 0.49999988}
 --- !u!114 &1905328465
 MonoBehaviour:
