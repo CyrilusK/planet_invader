@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 247196178}
   - component: {fileID: 247196177}
   - component: {fileID: 247196179}
+  - component: {fileID: 247196180}
   m_Layer: 0
   m_Name: planetGray (1)
   m_TagString: Untagged
@@ -564,6 +565,22 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &247196180
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247196176}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735
 --- !u!1 &250947034
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +658,7 @@ GameObject:
   - component: {fileID: 312202517}
   - component: {fileID: 312202516}
   - component: {fileID: 312202518}
+  - component: {fileID: 312202519}
   m_Layer: 0
   m_Name: planetGray (6)
   m_TagString: Untagged
@@ -728,6 +746,22 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &312202519
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312202515}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735
 --- !u!1 &513716329
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +891,6 @@ GameObject:
   - component: {fileID: 579479237}
   - component: {fileID: 579479234}
   - component: {fileID: 579479233}
-  - component: {fileID: 579479236}
   - component: {fileID: 579479235}
   m_Layer: 0
   m_Name: planetGray (9)
@@ -946,15 +979,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
---- !u!222 &579479236
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579479232}
-  m_CullTransparentMesh: 0
+  m_Radius: 2
 --- !u!224 &579479237
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1186,6 +1211,7 @@ GameObject:
   - component: {fileID: 671747731}
   - component: {fileID: 671747730}
   - component: {fileID: 671747732}
+  - component: {fileID: 671747733}
   m_Layer: 0
   m_Name: planetGray (5)
   m_TagString: Untagged
@@ -1273,6 +1299,22 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &671747733
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671747729}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735
 --- !u!1 &974853104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1435,7 @@ GameObject:
   - component: {fileID: 1041037576}
   - component: {fileID: 1041037575}
   - component: {fileID: 1041037577}
+  - component: {fileID: 1041037578}
   m_Layer: 0
   m_Name: planetGray (7)
   m_TagString: Untagged
@@ -1480,6 +1523,22 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &1041037578
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041037574}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735
 --- !u!1 &1094508821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1550,7 @@ GameObject:
   - component: {fileID: 1094508823}
   - component: {fileID: 1094508822}
   - component: {fileID: 1094508824}
+  - component: {fileID: 1094508825}
   m_Layer: 0
   m_Name: planetGray (2)
   m_TagString: Untagged
@@ -1578,6 +1638,22 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &1094508825
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094508821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.7349999
 --- !u!1 &1111155271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1665,7 @@ GameObject:
   - component: {fileID: 1111155273}
   - component: {fileID: 1111155272}
   - component: {fileID: 1111155274}
+  - component: {fileID: 1111155275}
   m_Layer: 0
   m_Name: planetGray
   m_TagString: Untagged
@@ -1676,6 +1753,22 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &1111155275
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111155271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735
 --- !u!1 &1195300883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,6 +1780,7 @@ GameObject:
   - component: {fileID: 1195300885}
   - component: {fileID: 1195300884}
   - component: {fileID: 1195300886}
+  - component: {fileID: 1195300887}
   m_Layer: 0
   m_Name: planetGray (4)
   m_TagString: Untagged
@@ -1774,6 +1868,22 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &1195300887
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195300883}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735
 --- !u!1 &1463167767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,6 +2002,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8e0b2bfdad4457ab8b7220d9d0e2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1464889750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464889752}
+  - component: {fileID: 1464889751}
+  m_Layer: 0
+  m_Name: Fleet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1464889751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464889750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589b2b26693f44d339bf30f917ee96ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 0
+--- !u!4 &1464889752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464889750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.10080549, y: 0.25612828, z: -0.05901383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698726995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,6 +2254,7 @@ GameObject:
   - component: {fileID: 1734713429}
   - component: {fileID: 1734713428}
   - component: {fileID: 1734713427}
+  - component: {fileID: 1734713430}
   m_Layer: 0
   m_Name: planetGray (10)
   m_TagString: Untagged
@@ -2187,6 +2342,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1734713430
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734713426}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735
 --- !u!1 &1891677313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,6 +2605,7 @@ GameObject:
   - component: {fileID: 1988962485}
   - component: {fileID: 1988962484}
   - component: {fileID: 1988962486}
+  - component: {fileID: 1988962487}
   m_Layer: 0
   m_Name: planetGray (3)
   m_TagString: Untagged
@@ -2521,6 +2693,22 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &1988962487
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988962483}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735
 --- !u!1 &2066426842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,6 +2838,7 @@ GameObject:
   - component: {fileID: 2131926336}
   - component: {fileID: 2131926335}
   - component: {fileID: 2131926337}
+  - component: {fileID: 2131926338}
   m_Layer: 0
   m_Name: planetGray (8)
   m_TagString: Untagged
@@ -2737,3 +2926,19 @@ MonoBehaviour:
   owned_by_bot: 0
   neutral: 1
   counter: 0
+--- !u!58 &2131926338
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131926334}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.735

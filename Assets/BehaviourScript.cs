@@ -10,6 +10,8 @@ public class BehaviourScript : MonoBehaviour
     public bool neutral;
     public float counter;
 
+    private Fleet planetFleet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,11 +33,40 @@ public class BehaviourScript : MonoBehaviour
 
     private void OnMouseDown()
     {
+        planetFleet = GameObject.Find("Fleet").GetComponent<Fleet>();
         if (owned_by_user == true)
         {
-            population /= 2;
-            neutral = false;
-            owned_by_user = true;
+            if (planetFleet.size == 0)
+            {
+                planetFleet.size = population / 2;
+                population -= planetFleet.size;
+            } else
+            {
+                population += planetFleet.size;
+                planetFleet.size = 0;
+            }
+        }
+        if (owned_by_bot == true || neutral == true)
+        {
+            if (population >= planetFleet.size)
+            {
+                population -= planetFleet.size;
+                planetFleet.size = 0;
+            } else
+            {
+                population = planetFleet.size - population;
+                planetFleet.size = 0;
+                if (owned_by_bot == true)
+                {
+                    owned_by_bot = false;
+                    owned_by_user = true;
+                }
+                if (neutral == true)
+                {
+                    neutral = false;
+                    owned_by_user = true;
+                }
+            }
         }
     }
 }
