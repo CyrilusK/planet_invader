@@ -10,6 +10,8 @@ public class BehaviourScript : MonoBehaviour
     public bool neutral;
     public float counter;
 
+    private Ship ship;
+
     private Fleet planetFleet;
 
     // Start is called before the first frame update
@@ -34,20 +36,39 @@ public class BehaviourScript : MonoBehaviour
     private void OnMouseDown()
     {
         planetFleet = GameObject.Find("Fleet").GetComponent<Fleet>();
+        if (planetFleet.shipsOnScene > 0)
+        {
+            ship = GameObject.Find(planetFleet.shipName).GetComponent<Ship>();
+        }
         if (owned_by_user == true)
         {
-            if (planetFleet.size == 0)
+            //            if (planetFleet.size == 0)
+            //            {
+            if (planetFleet.allShipsHaveDestination)
             {
                 planetFleet.size = population / 2;
                 population -= planetFleet.size;
-            } else
+                planetFleet.position = gameObject.GetComponent<Transform>().position;
+            }
+ //           } else
+
+ //           if (planetFleet.shipsOnScene > 0)
+            else
             {
-                population += planetFleet.size;
-                planetFleet.size = 0;
+                //                population += planetFleet.size;
+                //                planetFleet.size = 0;
+                ship.destination = gameObject.GetComponent<Transform>().position;
+                ship.destinationName = gameObject.name;
+                ship.readyForTravel = true;
+                planetFleet.allShipsHaveDestination = true;
             }
         }
         if (owned_by_bot == true || neutral == true)
         {
+            ship.destination = gameObject.GetComponent<Transform>().position;
+            ship.destinationName = gameObject.name;
+            ship.readyForTravel = true;
+            planetFleet.allShipsHaveDestination = true;
             if (population >= planetFleet.size)
             {
                 population -= planetFleet.size;
@@ -60,11 +81,13 @@ public class BehaviourScript : MonoBehaviour
                 {
                     owned_by_bot = false;
                     owned_by_user = true;
+                    GetComponent<SpriteRenderer>().color = Color.green;
                 }
                 if (neutral == true)
                 {
                     neutral = false;
                     owned_by_user = true;
+                    GetComponent<SpriteRenderer>().color = Color.green;
                 }
             }
         }
