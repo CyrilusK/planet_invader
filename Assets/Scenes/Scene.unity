@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 247196179}
   - component: {fileID: 247196180}
   m_Layer: 0
-  m_Name: planetGray (1)
+  m_Name: Planet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 312202518}
   - component: {fileID: 312202519}
   m_Layer: 0
-  m_Name: planetGray (6)
+  m_Name: Planet7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 579479233}
   - component: {fileID: 579479235}
   m_Layer: 0
-  m_Name: planetGray (9)
+  m_Name: Planet10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1213,7 +1213,7 @@ GameObject:
   - component: {fileID: 671747732}
   - component: {fileID: 671747733}
   m_Layer: 0
-  m_Name: planetGray (5)
+  m_Name: Planet6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 1041037577}
   - component: {fileID: 1041037578}
   m_Layer: 0
-  m_Name: planetGray (7)
+  m_Name: Planet8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 1094508824}
   - component: {fileID: 1094508825}
   m_Layer: 0
-  m_Name: planetGray (2)
+  m_Name: Planet3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1654,6 +1654,57 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.7349999
+--- !u!1 &1097155487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097155489}
+  - component: {fileID: 1097155488}
+  m_Layer: 0
+  m_Name: BotFleet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1097155488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097155487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0b2c4f235114159969a3b92eb97e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 0
+  position: {x: 0, y: 0, z: 0}
+  botShipsOnScene: 0
+  botShipName: 
+  allShipsHaveDestination: 0
+  totalPlanetesOnScene: 11
+  botShip: {fileID: 2957290169522264518, guid: 172c9b03550a44a158ff38fb0dbe33d5, type: 3}
+  planetToAttack: {fileID: 0}
+--- !u!4 &1097155489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097155487}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.81730807, y: 0.37204224, z: 0.18830976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1111155271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,7 +1718,7 @@ GameObject:
   - component: {fileID: 1111155274}
   - component: {fileID: 1111155275}
   m_Layer: 0
-  m_Name: planetGray
+  m_Name: Planet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1782,7 +1833,7 @@ GameObject:
   - component: {fileID: 1195300886}
   - component: {fileID: 1195300887}
   m_Layer: 0
-  m_Name: planetGray (4)
+  m_Name: Planet5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2242,7 +2293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721295056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -0.03, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.03, z: 0.1}
   m_LocalScale: {x: 1.4568659, y: 1.4568659, z: 1.4568659}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2261,7 +2312,7 @@ GameObject:
   - component: {fileID: 1734713427}
   - component: {fileID: 1734713430}
   m_Layer: 0
-  m_Name: planetGray (10)
+  m_Name: Planet11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2612,7 +2663,7 @@ GameObject:
   - component: {fileID: 1988962486}
   - component: {fileID: 1988962487}
   m_Layer: 0
-  m_Name: planetGray (3)
+  m_Name: Planet4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2845,7 +2896,7 @@ GameObject:
   - component: {fileID: 2131926337}
   - component: {fileID: 2131926338}
   m_Layer: 0
-  m_Name: planetGray (8)
+  m_Name: Planet9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

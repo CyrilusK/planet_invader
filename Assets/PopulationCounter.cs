@@ -9,12 +9,12 @@ public class PopulationCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<TextMesh>().text = GetComponentInParent<BehaviourScript>().population.ToString();
+        GetComponent<TextMesh>().text = GetComponentInParent<BehaviourScript>().population.ToString(); //получим кол-во популяции для отображения 
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetComponent<TextMesh>().text = GetComponentInParent<BehaviourScript>().population.ToString();
+        GetComponent<TextMesh>().text = GetComponentInParent<BehaviourScript>().population.ToString(); //получим кол-во популяции для отображения 
     }
 }

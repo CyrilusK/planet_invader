@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BehaviourScript : MonoBehaviour
 {
-    public int population;
-    public bool owned_by_user;
-    public bool owned_by_bot;
-    public bool neutral;
-    public float counter;
+    public int population;      //популяция планеты
+    public bool owned_by_user;  //принадлежность игроку
+    public bool owned_by_bot;   //принадлежность боту
+    public bool neutral;        //нейтральная планета
+    public float counter;       //счётчик времени
 
     private Ship ship;
 
@@ -23,73 +23,45 @@ public class BehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((owned_by_user == true) || (owned_by_bot == true)) {
-            counter += Time.deltaTime;
-            if (counter >= 1)
+        if ((owned_by_user == true) || (owned_by_bot == true)) { //для планет игрока и бота
+            counter += Time.deltaTime; 
+            if (counter >= 1)       //если прошла одна или более секунд
             {
-                population += 1;
-                counter = 0;
+                population += 1;    //увеличиваем население
+                counter = 0;        //сбрасываем счётчик
             }
         }
     }
 
-    private void OnMouseDown()
+    private void OnMouseDown() //при нажатии кнопки мыши на планету
     {
-        planetFleet = GameObject.Find("Fleet").GetComponent<Fleet>();
-        if (planetFleet.shipsOnScene > 0)
+        planetFleet = GameObject.Find("Fleet").GetComponent<Fleet>(); //получаем доступ к игровому объекту Fleet
+        if (planetFleet.shipsOnScene > 0) //если на сцене есть корабли
         {
-            ship = GameObject.Find(planetFleet.shipName).GetComponent<Ship>();
+            ship = GameObject.Find(planetFleet.shipName).GetComponent<Ship>(); //получаем доступ к игровому объекту Ship по его имени
         }
-        if (owned_by_user == true)
+        if (owned_by_user == true) //если планета принадлежит игроку
         {
-            //            if (planetFleet.size == 0)
-            //            {
-            if (planetFleet.allShipsHaveDestination)
+            if (planetFleet.allShipsHaveDestination) //если все корабли имеют пункт назначения
             {
-                planetFleet.size = population / 2;
-                population -= planetFleet.size;
-                planetFleet.position = gameObject.GetComponent<Transform>().position;
+                planetFleet.size = population / 2; //берём половину населения планеты для отправки на новый корабль
+                population -= planetFleet.size; //уменьшаем население в 2 раза
+                planetFleet.position = gameObject.GetComponent<Transform>().position; //запоминаем позицию планеты, с которой мы взяли население
             }
- //           } else
-
- //           if (planetFleet.shipsOnScene > 0)
-            else
+            else //если есть корабли без пункта назначения
             {
-                //                population += planetFleet.size;
-                //                planetFleet.size = 0;
-                ship.destination = gameObject.GetComponent<Transform>().position;
-                ship.destinationName = gameObject.name;
-                ship.readyForTravel = true;
-                planetFleet.allShipsHaveDestination = true;
+                ship.destination = gameObject.GetComponent<Transform>().position; //назначаем короблю пункт назначения
+                ship.destinationName = gameObject.name; //запоминаем название планеты, на которую летит корабль
+                ship.readyForTravel = true; //говорим, что корабль готов к отправлению
+                planetFleet.allShipsHaveDestination = true; //говорим, что корабли во флоте имеют пункт назначения
             }
         }
-        if (owned_by_bot == true || neutral == true)
+        if (owned_by_bot == true || neutral == true) //если планета принадлежит боту или нейтральная
         {
-            ship.destination = gameObject.GetComponent<Transform>().position;
-            ship.destinationName = gameObject.name;
-            ship.readyForTravel = true;
-            planetFleet.allShipsHaveDestination = true;
-            if (population >= planetFleet.size)
-            {
-                population -= planetFleet.size;
-                planetFleet.size = 0;
-            } else
-            {
-                population = planetFleet.size - population;
-                planetFleet.size = 0;
-                if (owned_by_bot == true)
-                {
-                    owned_by_bot = false;
-                    owned_by_user = true;
-                    GetComponent<SpriteRenderer>().color = Color.green;
-                }
-                if (neutral == true)
-                {
-                    neutral = false;
-                    owned_by_user = true;
-                    GetComponent<SpriteRenderer>().color = Color.green;
-                }
-            }
+            ship.destination = gameObject.GetComponent<Transform>().position;   //запоминаем позицию планеты, на которую отправим корабли
+            ship.destinationName = gameObject.name; //запоминаем название планеты, на которую летит корабль
+            ship.readyForTravel = true; //корабли готовы к отправлению
+            planetFleet.allShipsHaveDestination = true; //все корабли имеют пункт назначения
         }
     }
 }

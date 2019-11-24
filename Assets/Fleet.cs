@@ -4,40 +4,40 @@ using UnityEngine;
 
 public class Fleet : MonoBehaviour
 {
-    public int size;
-    public Vector3 position;
-    public int shipsOnScene;
-    public string shipName;
-    public bool allShipsHaveDestination;
+    public int size; //количество населения для отправки на корабль
+    public Vector3 position; //позиция планеты, с которой мы взяли население
+    public int shipsOnScene; //количество кораблей на сцене
+    public string shipName; // имя корабля
+    public bool allShipsHaveDestination; //все корабли имеют пункт назначения
 
-    public GameObject ship;
+    public GameObject ship; //создаём пустой игровой объект для добавления кораблей на сцену
 
-    private Ship newShip;
-    private int shipNumber;
+    private Ship newShip; //создаём объект типа Ship для работы с новым вставленным на сцену кораблём
+    private int shipNumber; //порядковый номер корабля
 
 
     // Start is called before the first frame update
     void Start()
     {
-        shipNumber = 0;
-        shipsOnScene = 0;
-        allShipsHaveDestination = true;
+        shipNumber = 0; //начинаем нумерацию кораблей с 0
+        shipsOnScene = 0; //в начале игры у нас нет кораблей на сцене
+        allShipsHaveDestination = true; //по умолчанию все корабли имеют пункт назначения
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (size > 0 )
+        if (size > 0 ) //если количество населения для отправки на корабль > 0
         {
-            shipNumber += 1;
-            Instantiate(ship, position, transform.rotation);
-            shipsOnScene += 1;
-            allShipsHaveDestination = false;
-            shipName = "Ship" + shipNumber.ToString();
-            GameObject.Find("Ship(Clone)").name = shipName;
-            newShip = GameObject.Find(shipName).GetComponent<Ship>();
-            newShip.size = size;
-            size = 0;
+            shipNumber += 1; //увеличиваем порядковый номер корабля
+            Instantiate(ship, position, transform.rotation); //вставляем префаб корабля на сцену
+            shipsOnScene += 1;  //увеличиваем счётчик количества кораблей на сцене на 1
+            allShipsHaveDestination = false;    //не все корабли имеют пункт назначения
+            shipName = "Ship" + shipNumber.ToString();  //создаём новое имя корабля = ship + порядковый номер
+            GameObject.Find("Ship(Clone)").name = shipName; //задаем уникальное имя новому кораблю
+            newShip = GameObject.Find(shipName).GetComponent<Ship>(); //получаем доступ к игровому объекту по имени
+            newShip.size = size; //отправили население на корабль
+            size = 0; //обнуляем количество населения для отправки на корабль
         }
     }
 }
