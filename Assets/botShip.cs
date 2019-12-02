@@ -11,6 +11,7 @@ public class botShip : MonoBehaviour
 
     private float axisSpeed;
     private BehaviourScript destinationPlanet;
+    private PlayScene playScene;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class botShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playScene = GameObject.Find("PlayScene").GetComponent<PlayScene>();
         if (destination.x > gameObject.GetComponent<Transform>().position.x)
         {
             transform.position = transform.position + new Vector3((float)0.01, 0, 0);
@@ -59,19 +61,23 @@ public class botShip : MonoBehaviour
                     if (destinationPlanet.owned_by_user == true)
                     {
                         destinationPlanet.owned_by_user = false;
+                        playScene.playerPlanets -= 1;
                         destinationPlanet.owned_by_bot = true;
+                        playScene.botPlanets += 1;
                         destinationPlanet.GetComponent<SpriteRenderer>().color = Color.red;
                     }
                     if (destinationPlanet.neutral == true)
                     {
                         destinationPlanet.neutral = false;
                         destinationPlanet.owned_by_bot = true;
+                        playScene.botPlanets += 1;
                         destinationPlanet.GetComponent<SpriteRenderer>().color = Color.red;
                     }
                 }
             }
 
             Destroy(gameObject);
+            playScene.botShips -= 1;
         }
     }
 }

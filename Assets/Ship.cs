@@ -11,6 +11,7 @@ public class Ship : MonoBehaviour
 
     private float axisSpeed; //коэффициент скорости по оси
     private BehaviourScript destinationPlanet; //создаём объект для взаимодействия с планетой назначения
+    private PlayScene playScene;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class Ship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playScene = GameObject.Find("PlayScene").GetComponent<PlayScene>();
+
         if (readyForTravel) //если готовы к отправлению
         {
             if (destination.x > gameObject.GetComponent<Transform>().position.x) //если х пункта назначения больше, чем х положения корабля
@@ -63,13 +66,16 @@ public class Ship : MonoBehaviour
                     if (destinationPlanet.owned_by_bot == true) // если планета принадлежит боту
                     {
                         destinationPlanet.owned_by_bot = false; //забираем планету у бота
+                        playScene.botPlanets -= 1;
                         destinationPlanet.owned_by_user = true; //отдаём планету игроку
+                        playScene.playerPlanets += 1;
                         destinationPlanet.GetComponent<SpriteRenderer>().color = Color.green; //меняем цвет планеты на зёленый 
                     }
                     if (destinationPlanet.neutral == true) // если планета нейтральная
                     {
                         destinationPlanet.neutral = false; //перестаёт быть нейтральной
                         destinationPlanet.owned_by_user = true; //отдаём планету игроку
+                        playScene.playerPlanets += 1;
                         destinationPlanet.GetComponent<SpriteRenderer>().color = Color.green; //меняем цвет планеты на зёленый 
                     }
                 }
@@ -77,6 +83,7 @@ public class Ship : MonoBehaviour
             
             Destroy(gameObject); //уничтожаем корабль
             GameObject.Find("Fleet").GetComponent<Fleet>().shipsOnScene -= 1; //уменьшаем счетчик кол-ва кораблей на 1
+            playScene.playerShips -= 1;
         }
     }
 }

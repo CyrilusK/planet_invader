@@ -18,6 +18,7 @@ public class BotFleet : MonoBehaviour
     private BehaviourScript botPlanet;
     private bool readyToAttack;
     public BehaviourScript planetToAttack;
+    private PlayScene playScene;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class BotFleet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playScene = GameObject.Find("PlayScene").GetComponent<PlayScene>();
         int totalBotPlanetPopulation = 0;
         for (int i = 1; i <= totalPlanetesOnScene; i++)
         {
@@ -58,6 +60,7 @@ public class BotFleet : MonoBehaviour
                     botShipNumber += 1;
                     Instantiate(botShip, botPlanet.transform.position, transform.rotation);
                     botShipsOnScene += 1;  //надо проверить, нужно ли?
+                    playScene.botShips += 1;
                     botShipName = "botShip" + botShipNumber.ToString();
                     GameObject.Find("botShip(Clone)").name = botShipName;
                     newBotShip = GameObject.Find(botShipName).GetComponent<botShip>();

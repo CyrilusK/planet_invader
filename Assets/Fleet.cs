@@ -14,6 +14,7 @@ public class Fleet : MonoBehaviour
 
     private Ship newShip; //создаём объект типа Ship для работы с новым вставленным на сцену кораблём
     private int shipNumber; //порядковый номер корабля
+    private PlayScene playScene;
 
 
     // Start is called before the first frame update
@@ -27,11 +28,13 @@ public class Fleet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playScene = GameObject.Find("PlayScene").GetComponent<PlayScene>();
         if (size > 0 ) //если количество населения для отправки на корабль > 0
         {
             shipNumber += 1; //увеличиваем порядковый номер корабля
             Instantiate(ship, position, transform.rotation); //вставляем префаб корабля на сцену
             shipsOnScene += 1;  //увеличиваем счётчик количества кораблей на сцене на 1
+            playScene.playerShips += 1;
             allShipsHaveDestination = false;    //не все корабли имеют пункт назначения
             shipName = "Ship" + shipNumber.ToString();  //создаём новое имя корабля = ship + порядковый номер
             GameObject.Find("Ship(Clone)").name = shipName; //задаем уникальное имя новому кораблю

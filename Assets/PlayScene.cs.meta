@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d1fbf2b648f514089988d65f87fcd3b9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Planet: {fileID: 7040555843183300494, guid: 41b0299f938ed4a2ea110d335d7002a1,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

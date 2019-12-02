@@ -67,6 +67,7 @@
     <Compile Include="Assets\BotFleet.cs" />
     <Compile Include="Assets\botShip.cs" />
     <Compile Include="Assets\Fleet.cs" />
+    <Compile Include="Assets\PlayScene.cs" />
     <Compile Include="Assets\PopulationCounter.cs" />
     <Compile Include="Assets\Ship.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
