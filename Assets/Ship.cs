@@ -5,13 +5,13 @@ using UnityEngine;
 public class Ship : MonoBehaviour
 {
     public int size; //количество населения на корабле
-    public Vector3 destination; //координаты пункта назнаечния
+    public Vector3 destination; //координаты пункта назначения
     public string destinationName; //название планеты, на которую отправим корабли
     public bool readyForTravel; //готовность кораблей отправиться
 
     private float axisSpeed; //коэффициент скорости по оси
     private BehaviourScript destinationPlanet; //создаём объект для взаимодействия с планетой назначения
-    private PlayScene playScene;
+    private PlayScene playScene; //создаём объект типа PlayScene для работы с основными параметрами игры
 
     // Start is called before the first frame update
     void Start()

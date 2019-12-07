@@ -10,17 +10,17 @@ public class BehaviourScript : MonoBehaviour
     public bool neutral;        //нейтральная планета
     public float counter;       //счётчик времени
 
-    private Ship ship;
+    private Ship ship; //создаём объект типа Ship для получения доступа к игровому объекту Ship по его имени
 
-    private Fleet planetFleet;
+    private Fleet planetFleet; //создаём объект типа Fleet для получения доступа к игровому объекту Fleet по его имени
 
-    // Start is called before the first frame update
+    //Старт вызывается до первого обновления кадра
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    //Обновление вызывается один раз за кадр
     void Update()
     {
         if ((owned_by_user == true) || (owned_by_bot == true)) { //для планет игрока и бота
@@ -42,7 +42,7 @@ public class BehaviourScript : MonoBehaviour
         }
         if (owned_by_user == true) //если планета принадлежит игроку
         {
-            if (planetFleet.allShipsHaveDestination) //если все корабли имеют пункт назначения
+            if (planetFleet.allShipsHaveDestination) //если все корабли имеют пункт назначения или нет кораблей вообще
             {
                 planetFleet.size = population / 2; //берём половину населения планеты для отправки на новый корабль
                 population -= planetFleet.size; //уменьшаем население в 2 раза
