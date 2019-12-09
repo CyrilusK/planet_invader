@@ -39,7 +39,7 @@ public class BotFleet : MonoBehaviour
                 totalBotPlanetPopulation += botPlanet.population; //прибавляем население планеты к счётчику, если это планета бота
         }
 
-        for (int i = 1; i <= totalPlanetesOnScene; i++)
+        for (int i = 1; i < totalPlanetesOnScene + 1; i++)
         {
             planetToAttack = GameObject.Find("Planet" + i.ToString()).GetComponent<BehaviourScript>();
             //если планета не принадлежит боту и половина всеобщего количества населения на планетах бота больше чем
@@ -53,7 +53,7 @@ public class BotFleet : MonoBehaviour
 
         if (readyToAttack) //если бот готов атаковать
         {
-            for (int i = 1; i <= totalPlanetesOnScene; i++)
+            for (int i = 1; i < totalPlanetesOnScene + 1; i++)
             {
                 botPlanet = GameObject.Find("Planet" + i.ToString()).GetComponent<BehaviourScript>();
                 if (botPlanet.owned_by_bot == true) //если планета принадлежит боту 

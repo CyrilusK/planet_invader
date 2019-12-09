@@ -16,7 +16,7 @@ public class botShip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -49,37 +49,37 @@ public class botShip : MonoBehaviour
             if (destinationPlanet.owned_by_bot == true) // если планета принадлежит боту
             {
                 destinationPlanet.population += size; //отправим население с корабля на планету
-            } 
+            }
             if (destinationPlanet.owned_by_user == true || destinationPlanet.neutral == true) //если планета принадлежит игроку или нейтральная
             {
-                {
-                if (destinationPlanet.population >= size) // если население на планете больше населения на корабле
+               
+                    if (destinationPlanet.population >= size) // если население на планете больше населения на корабле
                     {
-                    destinationPlanet.population -= size; // уменьшаем население на планете
+                        destinationPlanet.population -= size; // уменьшаем население на планете
                     }
-                else
-                {
-                    destinationPlanet.population = size - destinationPlanet.population; // заселяем планету населением с корабля за вычетом населения планеты
+                    else
+                    {
+                        destinationPlanet.population = size - destinationPlanet.population; // заселяем планету населением с корабля за вычетом населения планеты
                         if (destinationPlanet.owned_by_user == true) // если планета принадлежит игроку
                         {
-                        destinationPlanet.owned_by_user = false; //забираем планету у игрока
+                            destinationPlanet.owned_by_user = false; //забираем планету у игрока
                             playScene.playerPlanets -= 1;
-                        destinationPlanet.owned_by_bot = true; //отдаём планету боту
+                            destinationPlanet.owned_by_bot = true; //отдаём планету боту
                             playScene.botPlanets += 1;
-                        destinationPlanet.GetComponent<SpriteRenderer>().color = Color.red; //меняем цвет планеты на красный 
+                            destinationPlanet.GetComponent<SpriteRenderer>().color = Color.red; //меняем цвет планеты на красный 
                         }
-                    if (destinationPlanet.neutral == true) // есчли планета нейтральная
-                    {
-                        destinationPlanet.neutral = false; //перестаёт быть нейтральной
+                        if (destinationPlanet.neutral == true) // есчли планета нейтральная
+                        {
+                            destinationPlanet.neutral = false; //перестаёт быть нейтральной
                             destinationPlanet.owned_by_bot = true; // отдаем планету боту
-                        playScene.botPlanets += 1;
-                        destinationPlanet.GetComponent<SpriteRenderer>().color = Color.red; //меняем цвет планеты на красный 
+                            playScene.botPlanets += 1;
+                            destinationPlanet.GetComponent<SpriteRenderer>().color = Color.red; //меняем цвет планеты на красный 
                         }
+                    }
                 }
-            }
 
-            Destroy(gameObject); //уничтожаем корабль
-            playScene.botShips -= 1;
+                Destroy(gameObject); //уничтожаем корабль
+                playScene.botShips -= 1;
+            }
         }
     }
-}

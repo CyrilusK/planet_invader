@@ -347,7 +347,7 @@ MonoBehaviour:
   botShipsOnScene: 0
   botShipName: 
   allShipsHaveDestination: 0
-  totalPlanetesOnScene: 11
+  totalPlanetesOnScene: 12
   botShip: {fileID: 2957290169522264518, guid: 172c9b03550a44a158ff38fb0dbe33d5, type: 3}
   planetToAttack: {fileID: 0}
 --- !u!4 &1097155489
